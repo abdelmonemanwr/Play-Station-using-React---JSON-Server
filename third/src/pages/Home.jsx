@@ -1,23 +1,24 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import CarouselImage from './CarouselImage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function Home() {
   return (
-    <Carousel>
-      <Carousel.Item>
+    <Carousel style={{ height: '100vh' }}>
+      <Carousel.Item style={{ height: '100%' }}>
         <CarouselImage 
-          imageUrl="https://images.pexels.com/photos/11591941/pexels-photo-11591941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
-
+          imageUrl="https://images.pexels.com/photos/1174746/pexels-photo-1174746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
 
-      <Carousel.Item>
+      <Carousel.Item style={{ height: '100%' }}>
         <CarouselImage 
-          imageUrl="https://images.pexels.com/photos/6962206/pexels-photo-6962206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+          imageUrl="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -25,9 +26,9 @@ export function Home() {
         </Carousel.Caption>
       </Carousel.Item>
       
-      <Carousel.Item>
+      <Carousel.Item style={{ height: '100%' }}>
         <CarouselImage 
-          imageUrl="https://images.pexels.com/photos/14642112/pexels-photo-14642112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+          imageUrl="https://images.pexels.com/photos/3945655/pexels-photo-3945655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
         <Carousel.Caption>
           <h3>Third slide label</h3>
