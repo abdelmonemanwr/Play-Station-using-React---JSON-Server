@@ -1,8 +1,16 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../store/cartSlice';
 
 export function ProductCard({ product, deleteHandler }) {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <Card className="m-2 d-flex flex-column" style={{ width: '100%' }}>
       <Card.Img 
@@ -27,6 +35,9 @@ export function ProductCard({ product, deleteHandler }) {
           </Link>
           <Button variant="danger" onClick={() => deleteHandler(product.id)}>
             Delete
+          </Button>
+          <Button variant="primary" onClick={handleAddToCart}>
+            Add to Cart
           </Button>
         </div>
       </Card.Body>

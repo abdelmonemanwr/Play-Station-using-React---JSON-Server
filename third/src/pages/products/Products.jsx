@@ -28,7 +28,7 @@ export function Products() {
       <div className="container">
         <div className="row">
           {products && products.map((product) => (
-            <div className="col-md-3 d-flex align-items-stretch" key={product.id}>
+            <div className="col-md-4 d-flex align-items-stretch" key={product.id}>
               <ProductCard product={product} deleteHandler={deleteHandler} />
             </div>
           ))}

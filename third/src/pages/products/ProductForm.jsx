@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import { Button, Container, Form } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -35,7 +36,7 @@ export function ProductForm() {
 
     const addHandler = ( e ) => {
         e.preventDefault();
-        if ( id == 0 ) {
+        if ( id === 0 ) {
             addNewProduct( formData ).then( () => {
             navigator( '/products' )
             showSnackbar(`${formData.productName} Added successfully!`, 'success');
@@ -55,7 +56,7 @@ export function ProductForm() {
     }
   return (
     <Container className="mt-5">
-      <h2 className="mb-4">{id == 0 ? 'Add New Product' : 'Edit Product'}</h2>
+      <h2 className="mb-4">{id === 0 ? 'Add New Product' : 'Edit Product'}</h2>
       <Form onSubmit={addHandler}>
         <Form.Group className="mb-3" controlId="formProductName">
           <Form.Label>Product Name</Form.Label>
@@ -97,7 +98,7 @@ export function ProductForm() {
         </Form.Group>
 
         <Button variant="dark" type="submit" className="w-25 mb-5">
-          {id == 0 ? 'Add New Product' : 'Edit Product'}
+          {id === 0 ? 'Add New Product' : 'Edit Product'}
         </Button>
       </Form>
     </Container>

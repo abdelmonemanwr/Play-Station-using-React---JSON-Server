@@ -4,9 +4,7 @@ import { NotFound } from './NotFound';
 
 export function Error() {
   const error = useRouteError();
-
   console.error(error);
-
   if (error.status === 404) {
     return (
       <div>
@@ -16,7 +14,6 @@ export function Error() {
       </div>
     );
   }
-
   return (
     <div>
       <h1>Error</h1>
